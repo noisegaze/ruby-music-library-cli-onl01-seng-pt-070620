@@ -10,11 +10,5 @@ module Concerns::Findable
         
         
         
-        
-        
-    
-    
-    
-    
     
     end
