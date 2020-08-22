@@ -1,5 +1,7 @@
 class Genre 
 
+    extend Concerns::Findable 
+
     attr_accessor :name 
 
     @@all = []
@@ -26,6 +28,13 @@ class Genre
     def songs 
         @songs
     end
+
+    def artists
+        artists = @songs.collect do |song|
+          song.artist
+        end
+        artists.uniq
+      end
 
     def self.destroy_all 
         @@all.clear
